@@ -1,0 +1,18 @@
+{
+    "name": "rdrand-windows",
+    "version": "1.0.1",
+    "description": "RDRAND bindings for Windows",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "install": "node-gyp rebuild"
+    },
+    "keywords": [],
+    "author": "rfl890",
+    "license": "MIT",
+    "gypfile": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rfl890/node-rdrand-windows.git"
+    }
+}
