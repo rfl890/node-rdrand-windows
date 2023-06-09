@@ -175,10 +175,10 @@ namespace rdrand
             NODE_SET_METHOD(exports, "rand53", rand53);
             NODE_SET_METHOD(exports, "seed32", seed32);
             NODE_SET_METHOD(exports, "seed53", seed53);
-            NODE_SET_METHOD(exports, "rand64b", rand64b);
-            NODE_SET_METHOD(exports, "seed64b", seed64b);
-            NODE_SET_METHOD(exports, "rdrandBytes", rand64s);
-            NODE_SET_METHOD(exports, "rdseedBytes", seed64s);
+            NODE_SET_METHOD(exports, "rand64s", rand64s);
+            NODE_SET_METHOD(exports, "seed64s", seed64s);
+            NODE_SET_METHOD(exports, "rdrandBytes", rand64b);
+            NODE_SET_METHOD(exports, "rdseedBytes", seed64b);
         }
         else
         {
