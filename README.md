@@ -43,12 +43,12 @@ Returns a 53-bit random number (up to `Number.MAX_SAFE_INTEGER`).
 ```js
 seed32(void): number
 ```
-Returns a 32-bit random ***seed***. This doesn't go through a CSPRNG, you should only use it to seed your own random number generator.
+Returns a 32-bit random number. Slower than RDRAND, but the output is truly random, making it useful for seeding (CS)PRNGS
 
 ```js
 seed53(void): number
 ```
-Returns a 53-bit random ***seed*** (up to `Number.MAX_SAFE_INTEGER`). This doesn't go through a CSPRNG, you should only use it to seed your own random number generator.
+Returns a 53-bit random number (up to `Number.MAX_SAFE_INTEGER`). Slower than RDRAND, but the output is truly random, making it useful for seeding (CS)PRNGS
 
 ```js
 rand64s(void): string
@@ -58,17 +58,18 @@ Returns a 64-bit random number in string representation.
 ```js
 seed64s(void): string
 ```
-Returns a 64-bit random ***seed*** in string representation. This doesn't go through a CSPRNG, you should only use it to seed your own random number generator.
+Returns a 64-bit random number in string representation. Slower than RDRAND, but the output is truly random, making it useful for seeding (CS)PRNGS
 
 ```js
 rdrandBytes(length: number): Buffer
 ```
+**Warning: This function can generate at most 128 bits of entropy, so do not use it if length > 16. Use RDSEED instead if possible (*especially* for generating encryption keys)**
 Returns a Buffer of the provided length filled with random bytes.
 
 ```js
 rdseedBytes(length: number): Buffer
 ```
-Returns a Buffer of the provided length filled with random bytes from a seed. This doesn't go through a CSPRNG, you should only use it to seed your own random number generator.
+Returns a Buffer of the provided length filled with random bytes. Slower than RDRAND, but the output is truly random, making it useful for seeding (CS)PRNGS.
 
 # License
 ```

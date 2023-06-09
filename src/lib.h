@@ -2,22 +2,24 @@
 #define __RDRAND_H__
 
 #include <stdint.h>
-#include <windows.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 
-BOOL rdrand32(uint32_t *r); // returns a 32-bit random number
+int rdrand32(uint32_t *r); // returns a 32-bit random number
 
-BOOL rdrand64(uint64_t *r); // returns a 64-bit random number
+int rdrand64(uint64_t *r); // returns a 64-bit random number
 
-BOOL rdseed32(uint32_t *r); // returns a 32-bit conditioned random number, for seeding (CS)PRNGs
+int rdseed32(uint32_t *r); // returns a 32-bit conditioned random number, for seeding (CS)PRNGs
 
-BOOL rdseed64(uint64_t *r); // returns a 64-bit conditioned random number, for seeding (CS)PRNGs
+int rdseed64(uint64_t *r); // returns a 64-bit conditioned random number, for seeding (CS)PRNGs
 
-BOOL supports_rdrand(void); // returns whether the CPU supports rdrand
+int supports_rdrand(void); // returns whether the CPU supports rdrand
+
+int rdrand_get_bytes (uint8_t *dest, unsigned int n);
+int rdseed_get_bytes (uint8_t *dest, unsigned int n);
 
 #ifdef __cplusplus
 }

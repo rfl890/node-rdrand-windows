@@ -1,6 +1,6 @@
 {
     "name": "rdrand-windows",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "RDRAND bindings for Windows",
     "main": "index.js",
     "scripts": {
